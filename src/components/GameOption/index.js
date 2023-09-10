@@ -1,5 +1,3 @@
-import {ImageContainer, ImageElement, ButtonElement} from './styledComponent'
-
 const GameOption = props => {
   const {optionDetails, changeImageView} = props
   const {imageUrl, id} = optionDetails
@@ -8,12 +6,14 @@ const GameOption = props => {
   }
   return (
     <ImageContainer>
-      <ButtonElement onClick={onChangeImage} data-testid={`${id}Button`}>
-        <ImageElement>
-          src={imageUrl} alt={id}
-        </ImageElement>
+      <ButtonElement
+        onClick={onChangeImage}
+        data-testid={`${id.lower()}Button`}
+      >
+        <ImageElement src={imageUrl} alt={id} />
       </ButtonElement>
     </ImageContainer>
   )
 }
 export default GameOption
+
