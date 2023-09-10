@@ -3,7 +3,6 @@ import {Component} from 'react'
 import {RiCloseLine} from 'react-icons/ri'
 import Popup from 'reactjs-popup'
 import GameOption from '../GameOption'
-import 'reactjs-popup/dist/index.css'
 
 import {
   OverallContainer,
@@ -50,6 +49,7 @@ class RockerPaperScissors extends Component {
     const {choicesList} = this.props
     const index = Math.floor(Math.random() * 3)
     const randomObject = choicesList[index]
+    console.log(randomObject)
     console.log(randomObject.id)
     return randomObject.id
   }
@@ -102,7 +102,9 @@ class RockerPaperScissors extends Component {
     return (
       <ScoreContainer>
         <HeadingElement>
-          ROCK <br /> PAPER <br /> SCISSORS
+          ROCK <br />
+          PAPER <br />
+          SCISSORS
         </HeadingElement>
         <CardContainer>
           <Description>Score</Description>
@@ -150,7 +152,7 @@ class RockerPaperScissors extends Component {
         </ChoiceContainer>
         <HeadingText>IT IS DRAW</HeadingText>
         <ButtonElement type="button" onClick={this.renderPlay}>
-          Play Again
+          PLAY AGAIN
         </ButtonElement>
       </ResultContainer>
     )
@@ -175,7 +177,7 @@ class RockerPaperScissors extends Component {
         </ChoiceContainer>
         <HeadingText>YOU WON</HeadingText>
         <ButtonElement type="button" onClick={this.renderPlay}>
-          Play Again
+          PLAY AGAIN
         </ButtonElement>
       </ResultContainer>
     )
@@ -200,7 +202,7 @@ class RockerPaperScissors extends Component {
         </ChoiceContainer>
         <HeadingText>YOU LOSE</HeadingText>
         <ButtonElement type="button" onClick={this.renderPlay}>
-          Play Again
+          PLAY AGAIN
         </ButtonElement>
       </ResultContainer>
     )
