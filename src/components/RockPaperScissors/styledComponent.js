@@ -40,8 +40,10 @@ export const Description = styled.p`
   font-weight: bold;
   font-family: 'Roboto';
 `
-export const SmallHeading = styled(HeadingElement)`
+export const SmallHeading = styled(Description)`
   color: #223a5f;
+  font-size: 25px;
+  font-family: 'Roboto';
 `
 export const UnorderedList = styled.ul`
   display: flex;
@@ -69,7 +71,8 @@ export const ImageElement = styled.img`
   width: 150px;
   height: 150px;
 `
-export const HeadingText = styled(HeadingElement)`
+export const HeadingText = styled.p`
+  color: #ffffff;
   font-family: 'Roboto';
   font-size: 32px;
 `
